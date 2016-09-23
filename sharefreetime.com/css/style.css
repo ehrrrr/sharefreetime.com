@@ -1,0 +1,190 @@
+body {
+    font-size: 16px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+p::selection,
+a::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+span::selection,
+br::selection,
+div::selection,
+img::selection {
+    background: #B3D336;
+    /* WebKit/Blink Browsers */
+}
+p::-moz-selection,
+a::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+span::selection,
+br::selection,
+div::selection,
+img::selection {
+    background: #B3D336;
+    /* Gecko Browsers */
+}
+.form-control:focus {
+    border: 1px solid #B3D336;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(179, 211, 53, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(179, 211, 53, .6);
+}
+h2 {
+    font-size: 2.3em;
+}
+a {
+    color: #222222;
+}
+a:visited {
+    color: #B3D336;
+}
+a:hover {
+    color: #869B2C;
+}
+a:active {
+    color: #222222;
+}
+#header {
+    width: 100%;
+    height: 150px;
+    background-color: black;
+}
+#logo {
+    height: auto;
+    width: 350px;
+    padding: 15px 0 0 20px;
+}
+#logoSM {
+    height: 30px;
+    width: 25px;
+    background-image: url(../images/logoSM.svg);
+    background-repeat: no-repeat;
+    padding: 0;
+}
+#logoSM:hover {
+    background-image: url(../images/logoSMw.svg);
+}
+.text-center {
+    text-align: center;
+}
+.text-justified {
+    text-align: justify;
+}
+.dark {
+    background-color: #222222;
+    color: #FFFFFF;
+    background-image: url(../images/texture.png);
+}
+#sharefreetime-row {
+    margin-top: -15px;
+}
+.homepage-icons {
+    font-size: 100px;
+    color: #333;
+}
+.homepage-icons:hover {
+    text-shadow: 1px 1px 2px #000000;
+}
+.add-some-space {
+    padding: 30px 0 10px 0;
+}
+.well-custom p:first-child {
+    padding: 10px 0 30px 0;
+}
+.well-custom p:last-child {
+    padding: 30px 0 10px 0;
+}
+.button-yg {
+    background-color: #B3D336;
+}
+.button-yg:hover {
+    background-color: #222222;
+    color: #FFFFFF;
+}
+.button-yg-important {
+    font-size: 1.2em;
+}
+a.back-to-top {
+    display: none;
+    width: 60px;
+    height: 60px;
+    text-indent: -9999px;
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    bottom: 20px;
+    background: #B3D336 url("../images/up-arrow.png") no-repeat center 43%;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+.filters {
+    padding: 15px 0px;
+}
+.form-group,
+label {
+    margin-bottom: 20px;
+}
+.login-button {
+    margin-top: 10px;
+    font-size: 16px;
+}
+.login-register {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+.main-login {
+    padding: 70px 40px 40px 40px;
+    background-color: #fff;
+    /* shadows and rounded borders */
+    
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.edit-form {
+    margin: 0 5px;
+}
+.my-profile {
+    padding: 0.67em 0;
+}
+.input-group-addon {
+    background-color: #333;
+    color: #B3D336;
+}
+@media screen and (max-width: 400px) {
+    .homepage-icons {
+        font-size: 44px;
+    }
+    .main-login {
+        padding: 35px 20px;
+    }
+}
+@media screen and (min-width: 400px) and (max-width: 600px) {
+    .homepage-icons {
+        font-size: 70px;
+    }
+}
+@media screen and (max-width: 700px) {
+    body {
+        font-size: 14px;
+    }
+}
