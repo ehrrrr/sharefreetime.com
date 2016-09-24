@@ -148,7 +148,7 @@ label {
     font-size: 14px;
     text-align: center;
 }
-
+textarea { resize:vertical; }
 .main-login, .main-form {
     padding: 30px 40px 40px 40px;
     background-color: #fff;
@@ -165,7 +165,6 @@ label {
     padding-top: 70px;
 }
 .edit-form {
-    margin: 0 5px;
 }
 .my-profile {
     padding: 0.67em 0;
@@ -173,6 +172,14 @@ label {
 .input-group-addon {
     background-color: #333;
     color: #B3D336;
+}
+#upload_image {
+    width: auto;
+    height: 165px;
+    background-image: url(../images/logoYG.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 17px;
 }
 @media screen and (max-width: 400px) {
     .homepage-icons {

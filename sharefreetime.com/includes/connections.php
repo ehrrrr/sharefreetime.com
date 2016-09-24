@@ -2,7 +2,7 @@
     $servername = "localhost";
     $username = "root";
     $pwd = "";
-    $dbname = "authentication";
+    $dbname = "sharefreetime_db";
 
     // Create connection
     $mysqli = new mysqli($servername, $username, $pwd);

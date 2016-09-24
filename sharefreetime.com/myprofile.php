@@ -25,7 +25,8 @@
                     <div class="col-sm-3"><img src="./images/logoYGBl.png" style="width: 200px; height: auto;" alt=""></div>
                     <div class="col-sm-9">
                         <h1>Wellcome, <?php echo $_SESSION['username']?></h1>
-                        <a href="./editProfile.php">Edit Profile</a>
+                        <a href="./account_management.php">Account Management</a><br>
+                        <a href="./edit_profile.php">Edit Primary User Data</a>
                     </div>
                 </div>
             </div>

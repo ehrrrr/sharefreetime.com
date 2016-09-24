@@ -4,7 +4,7 @@
         <div class="form-group">
             <label class="sr-only" for="country">Country:</label>
             <div class="input-group">
-                <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                <div class="input-group-addon"><i class="fa fa-globe" aria-hidden="true"></i></div>
                 <select class="form-control" id="country" name ="country"></select>
             </div>
         </div>
