@@ -9,15 +9,15 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="sr-only" for="state">State:</label>
+            <label class="sr-only" for="city">City:</label>
             <div class="input-group">
                 <div class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                <select class="form-control" name ="state" id ="state"></select>
+                <select class="form-control" name ="city" id ="city"></select>
             </div>
         </div>
     </form>
 </div>
 
 <script language="javascript">
-	populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+	populateCountries("country", "city"); // first parameter is id of country drop-down and second parameter is id of city drop-down
 </script>

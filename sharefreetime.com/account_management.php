@@ -9,6 +9,10 @@
 		
 		// Removes Unwanted Spaces and characters from the files names of the files being uploaded
 		$UploadName = preg_replace("#[^a-z0-9.]#i", "", $UploadName);
+        
+        session_start();
+        $_SESSION["UserPic"] = $UploadName;
+        
 		// Upload File Size Limit 
 		if(($FileSize > 125000)){
 			
@@ -25,38 +29,36 @@
 ?>
 <?php require './includes/connections.php'; ?>
 <?php
-    session_start();
-    $user = $_SESSION["user_id"];
-
-    $sql = $db->query("SELECT * FROM users WHERE user_id = '$user'");
-    $result = $sql->fetch_array(MYSQLI_BOTH);
-
-    $_SESSION["UserName"] = $result['username'];
-    $_SESSION["UserEmail"] = $result['email'];
-//    $_SESSION["UserPass"] = $result['password'];
-    $_SESSION["FirstName"] = $result['first_name'];
-    $_SESSION["LastName"] = $result['last_name'];
-    $_SESSION["BirthDate"] = $result['birth_date'];
-    $_SESSION["UserGender"] = $result['gender'];
-    $_SESSION["HomeCountry"] = $result['country'];
-    $_SESSION["HomeCity"] = $result['city'];
-    $_SESSION["UserInterests"] = $result['interests'];
-    $_SESSION["UserAbout"] = $result['about_me'];
-    $_SESSION["UserImage"] = $result['image'];
+        session_start();
+        $user = $_SESSION["user_id"];
+        $sql = $db->query("SELECT * FROM users WHERE user_id = '$user'");
+        $result = $sql->fetch_array(MYSQLI_BOTH);
+//        $_SESSION["UserName"] = $result['username'];
+//        $_SESSION["UserEmail"] = $result['email'];
+//        $_SESSION["UserPass"] = $result['password'];
+//        $_SESSION["FirstName"] = $result['first_name'];
+//        $_SESSION["LastName"] = $result['last_name'];
+//        $_SESSION["BirthDate"] = $result['birth_date'];
+//        $_SESSION["UserGender"] = $result['gender'];
+//        $_SESSION["HomeCountry"] = $result['country'];
+//        $_SESSION["HomeCity"] = $result['city'];
+//        $_SESSION["UserInterests"] = $result['interests'];
+//        $_SESSION["UserAbout"] = $result['about_me'];
+//        $_SESSION["UserImage"] = $result['image'];
 ?>
-<?php 
+<?php  
     if(isset($_POST['update_btn'])){
-        $updateUserName = $mysqli->real_escape_string($_POST['username']);
-        $updateEmail = $mysqli->real_escape_string($_POST['email']);
-        $updateFirstName = $mysqli->real_escape_string($_POST['first_name']);
-        $updateLastName = $mysqli->real_escape_string($_POST['last_name']);
-        $updateBirthDate = $mysqli->real_escape_string($_POST['birth_date']);
-        $updateGender = $mysqli->real_escape_string($_POST['gender']);
-        $updateCountry = $mysqli->real_escape_string($_POST['country']);
-        $updateCity = $mysqli->real_escape_string($_POST['city']);
-        $updateInterests = $mysqli->real_escape_string($_POST['interests']);
-        $updateAboutMe = $mysqli->real_escape_string($_POST['about_me']);
-        $updateImage = $mysqli->real_escape_string($_POST['image']);
+//        $updateUserName = $mysqli->real_escape_string($_POST['username']);
+//        $updateEmail = $mysqli->real_escape_string($_POST['email']);
+//        $updateFirstName = $mysqli->real_escape_string($_POST['first_name']);
+//        $updateLastName = $mysqli->real_escape_string($_POST['last_name']);
+//        $updateBirthDate = $mysqli->real_escape_string($_POST['birth_date']);
+//        $updateGender = $mysqli->real_escape_string($_POST['gender']);
+//        $updateCountry = $mysqli->real_escape_string($_POST['country']);
+//        $updateCity = $mysqli->real_escape_string($_POST['city']);
+//        $updateInterests = $mysqli->real_escape_string($_POST['interests']);
+//        $updateAboutMe = $mysqli->real_escape_string($_POST['about_me']);
+//        $updateImage = $mysqli->real_escape_string($UploadName);
 
         $sql = $db->query("UPDATE `users` SET `username`='{$updateUserName}',`email`='{$updateEmail}', `first_name`='{$updateFirstName}',`last_name`='{$updateLastName}',`birth_date`='{$updateBirthDate}',`gender`='{$updateGender}',`city`='{$updateCity}',`country`='{$updateCountry}',`interests`='{$updateInterests}',`about_me`='{$updateAboutMe}',`image`='{$updateImage}' WHER  `user_id`='{$user}'");
 
@@ -75,7 +77,8 @@
 
         <!-- Include Date Range Picker -->
         <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />'
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+        <script src="//cdn.ckeditor.com/4.5.11/basic/ckeditor.js"></script>'
     ?>
     <?php require_once './includes/head.php'; ?>
     <body>
@@ -97,7 +100,7 @@
 
         <section>
             <div class="container-fluid form">
-                <form  class="form-horizontal" method="post" action="editProfile.php">
+                <form  class="form-horizontal" method="post" action="edit_profile.php">
                    <div class="well">
                         <div class="row">
                             <div class="col-sm-12 text-center"><h3>Manage Account</h3></div>
@@ -159,6 +162,9 @@
                                 <div class="form-group">
                                     <label class="sr-only" for="about_me">About me</label>
                                     <textarea class="form-control" id="about_me" name="about_me" placeholder="About me..." value="<?php echo  $_SESSION["UserAbout"]?>" rows="3"></textarea>
+                                    <script>
+                                        CKEDITOR.replace( 'about_me' );
+                                    </script>
                                 </div>
                             </div>
                             <div class="col-sm-1"></div>

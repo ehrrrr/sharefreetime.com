@@ -22,8 +22,8 @@
         <section>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-3"><img src="./images/logoYGBl.png" style="width: 200px; height: auto;" alt=""></div>
-                    <div class="col-sm-9">
+                   <?php include "./includes/sidebar.php"?>
+                    <div class="col-sm-8">
                         <h1>Wellcome, <?php echo $_SESSION['username']?></h1>
                         <a href="./account_management.php">Account Management</a><br>
                         <a href="./edit_profile.php">Edit Primary User Data</a>

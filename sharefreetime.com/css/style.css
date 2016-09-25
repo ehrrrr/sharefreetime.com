@@ -71,12 +71,12 @@ a:active {
 #logoSM {
     height: 30px;
     width: 25px;
-    background-image: url(../images/logoSM.svg);
+    background-image: url(../images/svg/logoSM.svg);
     background-repeat: no-repeat;
     padding: 0;
 }
 #logoSM:hover {
-    background-image: url(../images/logoSMw.svg);
+    background-image: url(../images/svg/logoSMw.svg);
 }
 .text-center {
     text-align: center;
@@ -176,11 +176,49 @@ textarea { resize:vertical; }
 #upload_image {
     width: auto;
     height: 165px;
-    background-image: url(../images/logoYG.png);
+    background-image: url(../images/logo/logoYG.png);
     background-size: contain;
     background-repeat: no-repeat;
     margin-bottom: 17px;
 }
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: #333;
+    color: #b3d336;
+}
+.vertical-menu { border-left: 6px solid #b3d336; background-color: #fff; color: #333; padding: 10px 0 10px 10px;}
+/*
+.nav-pills > li.active > a {
+    background-color: #333;
+    color: #b3d336;
+;
+}
+
+.nav-pills>li.active>a:hover {
+    background-color:#222;
+    color: #b3d336;
+}
+
+.nav-pills>li.active > a:active {
+    background-color:#000;
+    color: #fff;
+}
+
+.nav-pills>li > a:hover {
+    background-color:#CCC;
+    color: #869b2c;
+}
+*/
+
+/*
+.nav-pills>li.active > a:visited {
+    background-color:#b3d336;
+}
+*/
+
+// This changes the color of the hovered pill
+
+
 @media screen and (max-width: 400px) {
     .homepage-icons {
         font-size: 44px;
