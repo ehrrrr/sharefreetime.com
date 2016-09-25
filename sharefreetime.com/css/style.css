@@ -216,6 +216,15 @@ textarea { resize:vertical; }
 }
 */
 
+.fileuploadholder {
+	margin: 60px auto 0px auto;
+	background-color:#FFF;
+	border:1px solid #CCC;
+	padding:6px 60px;
+}
+
+.thumb-image{float:left;width:100px;position:relative;padding:5px;}
+
 // This changes the color of the hovered pill
 
 
