@@ -27,7 +27,7 @@
             $_SESSION['message'] = "The two passwords do not match";
         }
 
-        header('Location: edit_account.php');
+        header('Location: myprofile.php');
 
     }
 ?>

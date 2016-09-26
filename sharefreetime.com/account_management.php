@@ -33,32 +33,32 @@
         $user = $_SESSION["user_id"];
         $sql = $db->query("SELECT * FROM users WHERE user_id = '$user'");
         $result = $sql->fetch_array(MYSQLI_BOTH);
-//        $_SESSION["UserName"] = $result['username'];
-//        $_SESSION["UserEmail"] = $result['email'];
-//        $_SESSION["UserPass"] = $result['password'];
-//        $_SESSION["FirstName"] = $result['first_name'];
-//        $_SESSION["LastName"] = $result['last_name'];
-//        $_SESSION["BirthDate"] = $result['birth_date'];
-//        $_SESSION["UserGender"] = $result['gender'];
-//        $_SESSION["HomeCountry"] = $result['country'];
-//        $_SESSION["HomeCity"] = $result['city'];
-//        $_SESSION["UserInterests"] = $result['interests'];
-//        $_SESSION["UserAbout"] = $result['about_me'];
-//        $_SESSION["UserImage"] = $result['image'];
+        $_SESSION["UserName"] = $result['username'];
+        $_SESSION["UserEmail"] = $result['email'];
+        $_SESSION["UserPass"] = $result['password'];
+        $_SESSION["FirstName"] = $result['first_name'];
+        $_SESSION["LastName"] = $result['last_name'];
+        $_SESSION["BirthDate"] = $result['birth_date'];
+        $_SESSION["UserGender"] = $result['gender'];
+        $_SESSION["HomeCountry"] = $result['country'];
+        $_SESSION["HomeCity"] = $result['city'];
+        $_SESSION["UserInterests"] = $result['interests'];
+        $_SESSION["UserAbout"] = $result['about_me'];
+        $_SESSION["UserImage"] = $result['image'];
 ?>
 <?php  
     if(isset($_POST['update_btn'])){
-//        $updateUserName = $mysqli->real_escape_string($_POST['username']);
-//        $updateEmail = $mysqli->real_escape_string($_POST['email']);
-//        $updateFirstName = $mysqli->real_escape_string($_POST['first_name']);
-//        $updateLastName = $mysqli->real_escape_string($_POST['last_name']);
-//        $updateBirthDate = $mysqli->real_escape_string($_POST['birth_date']);
-//        $updateGender = $mysqli->real_escape_string($_POST['gender']);
-//        $updateCountry = $mysqli->real_escape_string($_POST['country']);
-//        $updateCity = $mysqli->real_escape_string($_POST['city']);
-//        $updateInterests = $mysqli->real_escape_string($_POST['interests']);
-//        $updateAboutMe = $mysqli->real_escape_string($_POST['about_me']);
-//        $updateImage = $mysqli->real_escape_string($UploadName);
+        $updateUserName = $mysqli->real_escape_string($_POST['username']);
+        $updateEmail = $mysqli->real_escape_string($_POST['email']);
+        $updateFirstName = $mysqli->real_escape_string($_POST['first_name']);
+        $updateLastName = $mysqli->real_escape_string($_POST['last_name']);
+        $updateBirthDate = $mysqli->real_escape_string($_POST['birth_date']);
+        $updateGender = $mysqli->real_escape_string($_POST['gender']);
+        $updateCountry = $mysqli->real_escape_string($_POST['country']);
+        $updateCity = $mysqli->real_escape_string($_POST['city']);
+        $updateInterests = $mysqli->real_escape_string($_POST['interests']);
+        $updateAboutMe = $mysqli->real_escape_string($_POST['about_me']);
+        $updateImage = $mysqli->real_escape_string($UploadName);
 
         $sql = $db->query("UPDATE `users` SET `username`='{$updateUserName}',`email`='{$updateEmail}', `first_name`='{$updateFirstName}',`last_name`='{$updateLastName}',`birth_date`='{$updateBirthDate}',`gender`='{$updateGender}',`city`='{$updateCity}',`country`='{$updateCountry}',`interests`='{$updateInterests}',`about_me`='{$updateAboutMe}',`image`='{$updateImage}' WHER  `user_id`='{$user}'");
 

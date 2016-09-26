@@ -39,7 +39,7 @@
             $sqlUser = $db->query("UPDATE `users` SET `image`='{$updateImage}' WHERE  `user_id`='{$user}'");    
         }
         
-        header('Location: edit_picture.php');
+        header('Location: myprofile.php');
 
     }
 ?>

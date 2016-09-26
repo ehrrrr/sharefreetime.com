@@ -32,7 +32,7 @@
         }
         
 
-        header('Location: edit_about_user.php');
+        header('Location: myprofile.php');
 
     }
 ?>

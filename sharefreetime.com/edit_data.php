@@ -24,7 +24,7 @@
         $sqlUser = $db->query("UPDATE `users` SET `first_name`='{$updateFirstName}',`last_name`='{$updateLastName}',`birth_date`='{$updateBirthDate}',`gender`='{$updateGender}' WHERE  `user_id`='{$user}'");
 
 
-        header('Location: edit_data.php');
+        header('Location: myprofile.php');
 
     }
 ?>
